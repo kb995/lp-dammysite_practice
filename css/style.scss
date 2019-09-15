@@ -1,0 +1,552 @@
+
+
+//====================
+//　import
+//====================
+@import "reset";
+@import "animate";
+@import "base";
+@import "color";
+@import "font";
+@import "utility";
+
+
+//====================
+//　header
+//====================
+.header {
+  width: 100vw;
+  height: 7.65vw;
+  &-logo {
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: $font-color_header;
+    padding: 2.5vw;
+    float: left;
+  }
+
+  .global-menu {
+    float: right;
+
+    .menu {
+      &-item {
+         float: left;
+          &-link {
+            font-size: 1.4vw;
+            font-weight: bold;
+            color: $font-color_header;
+            padding: 3.5vw 1.95vw;
+            display: block;
+          &.active {
+            color: $font-color_white;
+            background-color: $bg-color_header-active;
+          }
+        }
+      }
+    }
+  }
+}
+
+//====================
+//　top img
+//====================
+.top-img {
+  background-image: url(../img/top-img.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 5.23vw;
+  position: relative;
+  z-index: 0;
+
+  &-cover {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.41);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+  &-title {
+    width: 47.34vw;
+    height: 19.68vw;
+    z-index: 2;
+    position: absolute;
+    top: 20.07vw;
+    left: 7.81vw;
+  }
+  &-subtitle {
+    font-size: 1.87vw;
+    font-weight: bold;
+    color: $font-color_white;
+    position: absolute;
+    top: 42.18vw;
+    left: 7.81vw;
+    z-index: 2;
+  }
+  &-box{
+    width: 48.75vw;
+    height: 5.78vw;
+    border: 1px solid #999;
+    background: $bg-color_white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+
+  .box-time {
+    font-size: 1.09vw;
+    font-weight: bold;
+    padding: 2.3vw 2.34vw;
+    background-color: #000;
+    color: $bg-color_white;
+    float: left;
+  }
+  .box-text {
+    font-size: 1.09vw;
+    padding: 2.3vw 2.34vw;
+
+    float: left;
+    }
+  }
+  .scroll {
+    width: 1px;
+    height: 11.87vw;
+    background: #161616;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    z-index: 3;
+    &-line {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    .scroll-line::after {
+      width: 5px;
+      height: 15px;
+      background: #3D16DC;
+      display: block;
+      content: "";
+      left: -2px;
+      position: absolute;
+      animation: scroll 3s infinite;
+      @keyframes scroll {
+        0% { transform: translateY(0) }
+        100% { transform: translateY(11.87vw);}
+      }
+  }
+  }
+}
+
+
+
+//====================
+//　about
+//====================
+    .about {
+      background-image: url(../img/k-hack-textile_about01.jpg);
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 55.15vw;
+      width: 100vw;
+      height: 0;
+      padding-bottom: 55.15vw;
+      position: relative;
+      
+      &-title {
+        font-size: 2.81vw;
+        font-weight: bold;
+        position: absolute;
+        top: 12.57vw;
+        left: 7.81vw;
+        z-index: 3;
+      }
+      &-text {
+        font-size: 24px;
+        line-height: 3.28vw;
+        position: absolute;
+        top: 18.35vw;
+        left: 7.81vw;
+        z-index: 3;
+      }
+      
+      &-img_02 {
+        width: 50.93vw;
+        height: 38.20vw;
+        position: absolute;
+        right: 0;
+        top: 14vw;
+        z-index: 2;
+      }
+      &-img_blur {
+        width: 41.48vw;
+        position: absolute;
+        right: 0;
+        top: 28.20vw;
+        z-index: 1;
+        animation: about-img-blur 3s linear infinite;
+        transform-origin: 50% 50%;
+        @keyframes about-img-blur {
+          0% { transform: translateY(0) }
+          50% { transform: translateY(-20px) }
+          100% { transform: translateY(0) }
+        }
+      }
+    }
+
+    .point-container {
+      width: 100vw;
+      margin-bottom: 13.51vw;
+      padding: 0 7.81vw;
+      display: flex;
+      justify-content: space-between;
+
+      .point {
+        width: 26.4vw;
+
+        &-title {
+          color: #272727;
+          font-weight: bold;
+          margin-bottom: 2.96vw;
+        }
+        &-text {
+          font-size: 1.25vw;
+          line-height: 3.28vw;
+        }
+      }
+      .point:nth-of-type(2) {
+        margin-top: 7.03vw;
+      }
+      .point:nth-of-type(3) {
+        margin-top: 14.06vw;
+      }
+    }
+
+
+//====================
+//　concept
+//====================
+.concept {
+  width: 100vw;
+  height: 0;
+  padding-bottom: 61.01vw;
+  margin-bottom: 9.45vw;
+  overflow: hidden;
+  position: relative;
+
+  .bg-dark {
+    width: 71.17vw;
+    height: 59.06vw;
+    background-color: $bg-color_dark;
+    float: right;
+    z-index: 0;
+    position: relative;
+    }
+    &-img-pic {
+      width: 56.48vw;
+      position: absolute;
+      top: 19vw;
+      left: 0;
+      z-index: 2;
+    }
+    &-img_blur {
+      width: 56.48vw;
+      position: absolute;
+      top: 25.42vw;
+      left: 3.51vw;
+      z-index: 1;
+      animation: concept-img-blur 3s linear infinite;
+      transform-origin: 50% 50%;
+      @keyframes concept-img-blur {
+        0% { transform: translateY(0) }
+        50% { transform: translateY(-20px) }
+        100% { transform: translateY(0) }
+      }
+    }
+    &-title {
+      font-size: 5vw;
+      font-weight: bold;
+      position: absolute;
+      top: 5.31vw;
+      left: 8.43vw;
+      z-index: 2;
+    }
+    &-title-bg {
+      font-size: 14.06vw;
+      color: #d4d4d4;
+      position: absolute;
+      top: 3.67vw;
+      left: 16.95vw;
+      white-space: nowrap;
+      z-index: 1;
+    }
+
+    &-right {
+      width: 26.4vw;
+      padding-left: 1.56vw;
+      border-left: .78vw solid $bg-color_crimson;
+      position: absolute;
+      top: 27.65vw;
+      right: 8vw;
+    &-title {
+      font-size: 2.81vw;
+      margin-bottom: 2.26vw;
+      line-height: 4.68vw;
+      z-index: 1;
+    }
+    &-text {
+      font-size: .93vw;
+      font-weight: bold;
+      line-height: 2.34vw;
+      z-index: 1;
+     }
+  }
+}
+.concept-under {
+  width: 61.01vw;
+  font-size: 1.13vw;
+  line-height: 2.18vw;
+  padding: 0 0 11.09vw 7.81vw;
+}
+
+//====================
+//　project
+//====================
+.project {
+  width: 100vw;
+  height: 0;
+  padding-bottom: 68.28vw;
+  margin-bottom: 6.95vw;
+  position: relative;
+
+  &-title {
+    font-size: 5vw;
+    font-weight: bold;
+    color: #000;
+    position: absolute;
+    top: 25.07vw;
+    left: 7.81vw;
+    z-index: 1;
+  }
+  &-bg-title {
+    font-size: 15.62vw;
+    color: #DBDBDB;
+    position: absolute;
+    top: 0;
+    left: 7.81vw;
+    z-index: 1;
+  }
+  &-text {
+    width: 23.90vw;
+    font-size: 1.25vw;
+    color: #000;
+    font-weight: bold;
+    line-height: 2.34vw;
+    position: absolute;
+    top: 33.51vw;
+    left: 7.81vw;
+    z-index: 1;
+  }
+  &-img_bg {
+    width: 44.06vw;
+    height: 42.35vw;
+    background-color: $bg-color_crimson;
+    position: absolute;
+    top: 7.5vw;
+    left: 19.37vw;
+    z-index: 0;
+  }
+  &-img_pic {
+  width: 61.95vw;
+  position: absolute;
+  top: 20.62vw;
+  right: 0;
+  }
+  &-img_blur {
+    width: 61.95vw;
+    height: 42.96vw;
+    position: absolute;
+    top: 33.57vw;
+    right: 0;
+    z-index: -1;
+    animation: project-img_blur 3s linear infinite;
+    transform-origin: 50% 50%;
+    @keyframes project-img_blur {
+      0% { transform: translateY(0) }
+      50% { transform: translateY(-20px) }
+      100% { transform: translateY(0) }
+      }
+  }
+}
+
+// project_tabmenu
+.tabmenu-container {
+  width: 84.37vw;
+  height: 0;
+  padding-bottom: 60.07vw;
+  margin: 0 auto  18.59vw auto;
+
+  .tabmenu {
+    width: 100%;
+
+    &-tab {
+      font-size: 1.85vw;
+      padding: 2.73vw 2.96vw;
+      font-weight: bold;
+      border: 1px solid #b4b4b4b4;
+      display: inline-block;
+      background-color: #d4d4d4;
+      color: $bg-color_white;
+      &.is-active-tab {
+      background-color: $bg-color_crimson;
+      }
+    }
+    &-body {
+      display: none;
+      width: 100%;
+      height: 52.73vw;
+      padding: 11.4vw 4.06vw 8.04vw 4.06vw;
+      border: 7px solid #d4d4d4;
+       &.is-active-body {
+        display: block;
+      }
+      &-img_01 {
+        width: 30.07vw;
+        float: left;
+      }
+      .tabmenu-body-right-text {
+        width: 42.96vw;
+        padding-left: 5.07vw;
+        float: right;
+      }
+      &-title {
+        font-size: 2.81vw;
+        font-weight: bold;
+        padding-bottom: 4.06vw;
+      }
+      &-subtitle {
+        font-size: 1.87vw;
+        font-weight: bold;
+        padding-bottom: 2.5vw;
+        line-height: 1.5;
+      }
+      &-text {
+        font-size: 16px;
+        line-height: 2.5vw;
+      }
+    }
+  }
+}
+
+
+//====================
+//　member
+//====================
+.member {
+  width: 100vw;
+  height: 0;
+  padding-bottom: 82vw;
+  margin-bottom: 8.32vw;
+  position: relative;
+
+  &-title {
+    font-size: 5vw;
+    font-weight: bold;
+    color: $font-color_white;
+    position: absolute;
+    top: 34.45vw;
+    left: 7.81vw;
+    z-index: 2;
+  }
+  &-box {
+    width: 72.5vw;
+    height: 37.34vw;
+    background-color: $bg-color_crimson;
+    position: absolute;
+    top: 19.84vw;
+    left: 0;
+    z-index: 0;
+  }
+  &-img_pic01 {
+    width: 73.36vw;
+    height: 48.90vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  &-img_pic02 {
+    width: 55.39vw;
+    height: 32.26vw;
+    position: absolute;
+    top: 47.89vw;
+    right: 22.26vw;
+    z-index: 2;
+  }
+  &-img_blur {
+    width: 55.39vw;
+    position: absolute;
+    top: 50.29vw;
+    left: 28.21vw;
+    z-index: 0;
+    animation: member-img-blur 3s linear infinite;
+    transform-origin: 50% 50%;
+    @keyframes member-img-blur {
+      0% { transform: translateY(0) }
+      50% { transform: translateY(-20px) }
+      100% { transform: translateY(0) }
+    }
+  }
+}
+
+// slider
+.slider-img {
+  width: 140.93vw;
+  height: 23.82vw;
+}
+
+.member-under-text {
+  font-size: 16px;
+  color: #000;
+  width: 62.18vw;
+  height: 11.01vw;
+  margin: 13.55vw 17.42vw 11.17vw 20.31vw;
+  line-height: 2.18vw;
+}
+
+
+//====================
+//　contact
+//====================
+.contact {
+  width: 100vw;
+  height: 21.79vw;
+  text-align: center;
+  background-color: $bg-color_crimson;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-contents {
+    font-size: 1.87vw;
+    font-weight: bold;
+    border: 3px solid $font-color_default;
+    width: 60.78vw;
+    margin: 0 auto;
+    padding:4.68vw 25.78vw;
+    background-color: $bg-color_white;
+  }
+}
+//====================
+//　footer
+//====================
+.footer {
+  width: 100vw;
+  height: 7.42vw;
+  background-color: #222;
+}
+
